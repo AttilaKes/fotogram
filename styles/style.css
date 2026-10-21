@@ -53,7 +53,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 16px;
 }
 
 .gallery img {
@@ -64,13 +64,26 @@ button {
     border: 2px solid #124658;
 }
 
+.gallery img:hover {
+    border: 2px solid #6bc1e1;
+}
+
 dialog.opened {
     display: flex;
     flex-direction: column;
-    border: none;
-    justify-content: center;
+    gap: 24px;
 
-    padding: 56px 64px;
+    /* Größe an den Bildschirm anpassen */
+    width: 900px;
+    max-width: 90vw;
+    max-height: 90dvh;
+
+    /* Dialog mittig platzieren */
+    margin: auto;
+
+    /* Design */
+    padding: 40px;
+    border: none;
     border-radius: 40px;
     background-color: #09212a;
 }
@@ -84,16 +97,48 @@ dialog header {
     margin-bottom: 48px;
 }
 
+.close-button:hover {
+    background-image: url("../assets/icons/close_buttom_hover.svg");
+}
+
+.close-button:active {
+    background-image: url("../assets/icons/close_button_click.svg");
+}
+
+dialog section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+}
+
 dialog section img {
-    width: 100%;
-    object-fit: fill;
+    display: block;
+    max-width: 100%;
+    max-height: 55dvh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.arrow-left {
+    transform: rotate(180deg);
+}
+
+.arrow-left:hover {
+    transform: rotate(180deg);
+    background-image: url("../assets/icons/back_button_hover.svg");
+}
+
+.arrow-right:hover {
+    background-image: url("../assets/icons/back_button_hover.svg");
 }
 
 dialog footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 56px;
     color: #f5f5f5;
     padding: 0;
     margin-top: 48px;

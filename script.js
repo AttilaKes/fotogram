@@ -42,6 +42,16 @@ function closeStyling() {
     dialogRef.classList.remove("opened");
 }
 
+function changeImage(i) {
+    if (i < 0) {
+        i = myImgs.length - 1;
+    }
+    if (i >= myImgs.length) {
+        i = 0;
+    }
+    dialogRef.innerHTML = getDialogHTML(i);
+}
+
 function getImgHTML(i) {
     return `<button onclick="openDetail(${i})">
     <img
@@ -55,7 +65,7 @@ function getDialogHTML(i) {
     return `
         <header>
             <h2>${myImgs[i]}</h2>
-            <button onclick="closeDetail()">X</button>
+            <button onclick="closeDetail()"><img class="close-button" src="./assets/icons/close_button.svg" alt="Schließen"/></button>
         </header>
 
         <section>
@@ -66,9 +76,9 @@ function getDialogHTML(i) {
         </section>
 
         <footer>
-            <button>1</button>
-            <span>${[i + 1]}/12</span>
-            <button>2</button>
+            <button onclick="changeImage(${i - 1})"><img class="arrow-left" src="./assets/icons/back_button.svg" alt="Zurück"/></button>
+            <span>${[i + 1]}/${myImgs.length}</span>
+            <button onclick="changeImage(${i + 1})"><img class="arrow-right" src="./assets/icons/back_button.svg" alt="Weiter"/></button>
         </footer>
     `;
 }
