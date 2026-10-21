@@ -1,11 +1,24 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
     font-family: Figtree;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex: 1;
 }
 
 header {
     display: flex;
+    align-items: center;
     padding: 20px 0 20px 100px;
 
     background-color: #09212a;
@@ -13,16 +26,77 @@ header {
 
 h1 {
     color: #ffffff;
+    text-align: center;
+    font-size: clamp(32px, 4vw, 56px);
 }
 
-.collage {
+.myAlbum {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
-    gap: 50px;
+    justify-content: center;
+
+    padding: 60px 24px;
+    gap: 60px;
 
     background-color: #06171e;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.gallery img {
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid #124658;
+}
+
+dialog.opened {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+
+    padding: 56px 64px;
+    border-radius: 40px;
+    background-color: #09212a;
+}
+
+dialog header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 0px;
+    margin-bottom: 48px;
+}
+
+dialog section img {
+    width: 100%;
+    object-fit: fill;
+}
+
+dialog footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    color: #f5f5f5;
+    padding: 0;
+    margin-top: 48px;
 }
 
 footer {
@@ -30,7 +104,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 50px;
-    gap: 10px;
+    gap: 16px;
 
     color: #969696;
     background-color: #09212a;

@@ -10,24 +10,27 @@
         <link rel="stylesheet" href="./styles/style.css" />
         <script src="./script.js" defer></script>
     </head>
-    <body onload="init()"></body>
 
-    <main>
-        <section>
-            <header>
-                <a href="#">
-                    <img src="./assets/icons/fotogram_logo.svg" alt="" />
-                </a>
-            </header>
-        </section>
-        <section class="collage">
-            <h1>Your personal photo album</h1>
+    <body onload="init()">
+        <header>
+            <a href="#">
+                <img src="./assets/icons/fotogram_logo.svg" alt="" />
+            </a>
+        </header>
 
-            <div><p>test</p></div>
-        </section>
-    </main>
-    <footer class="footer-box">
-        <img src="./assets/icons/da_logo.svg" alt="DA-LOGO" />
-        <p>© 2023 Developer Akademie GmbH</p>
-    </footer>
+        <main>
+            <section class="myAlbum">
+                <h1>Your personal photo album</h1>
+
+                <div id="cardWrapper" class="gallery"></div>
+            </section>
+        </main>
+
+        <dialog id="myDialog" onclose="closeStyling()"></dialog>
+
+        <footer class="footer-box">
+            <img src="./assets/icons/da_logo.svg" alt="DA-LOGO" />
+            <p>© 2023 Developer Akademie GmbH</p>
+        </footer>
+    </body>
 </html>
