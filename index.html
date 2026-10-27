@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projekt - Fotogramm</title>
+        <link rel="icon" href="./assets/icons/logo_only.svg" />
         <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/style.css" />
         <script src="./template.js" defer></script>
@@ -12,20 +13,32 @@
 
     <body onload="init()">
         <header>
-            <a href="#">
-                <img src="./assets/icons/fotogram_logo.svg" alt="" />
-            </a>
+            <div class="wrapper">
+                <a href="#">
+                    <img
+                        src="./assets/icons/fotogram_logo.svg"
+                        alt="Fotogram home"
+                    />
+                </a>
+            </div>
         </header>
 
         <main>
             <section class="myAlbum">
-                <h1>Your personal photo album</h1>
+                <div class="wrapper">
+                    <h1>Your personal photo album</h1>
 
-                <div id="cardWrapper" class="gallery"></div>
+                    <div id="cardWrapper" class="gallery"></div>
+                </div>
             </section>
         </main>
 
-        <dialog id="myDialog" onclose="closeStyling()"></dialog>
+        <dialog
+            onclick="closeDetail()"
+            aria-labelledby="imageTitle"
+            id="myDialog"
+            onclose="closeStyling()"
+        ></dialog>
 
         <footer class="footer-box">
             <img src="./assets/icons/da_logo.svg" alt="DA-LOGO" />

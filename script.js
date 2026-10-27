@@ -13,6 +13,21 @@ let myImgs = [
     "bitcoin-krypto-6719042_1280.jpg",
 ];
 
+const altTexts = [
+    "Futuristische japanische Großstadt mit leuchtenden Neonlichtern bei Nacht",
+    "Kristallklarer Alpensee, umgeben von Bergen und grüner Natur",
+    "Stürmisches Meer mit hohen Wellen und dunklen Wolken",
+    "Schneeleopard in einer felsigen, schneebedeckten Berglandschaft",
+    "Computerbildschirm mit Programmcode in einer Entwicklungsumgebung",
+    "Sportwagen mit sportlichem Design und dynamischer Karosserie",
+    "Farbenprächtiger Eisvogel mit blau-orangefarbenem Gefieder",
+    "Person unter einem beeindruckenden Sternenhimmel bei Nacht",
+    "Gemütliches Frühstück auf einer Terrasse mit schöner Aussicht",
+    "Meeresschildkröte schwimmt durch klares blaues Meerwasser",
+    "Japanische Kirschblüten in voller Blüte vor malerischer Kulisse",
+    "Bitcoin als Symbol für digitale Währungen und Kryptowährungen",
+];
+
 const cardWrapperRef = document.getElementById("cardWrapper");
 const dialogRef = document.getElementById("myDialog");
 
