@@ -12,7 +12,7 @@ function getDialogHTML(i) {
     <div class="dialogContainer" onclick="event.stopPropagation()">
         <header>
             <h2 id="imageTitle">${myImgs[i]}</h2>
-            <button onclick="closeDetail()"><img class="close-button" src="./assets/icons/close_button.svg" alt="close"/></button>
+            <button onclick="closeDetail()"><img class="close-button" src="./assets/icons/close_button.svg" alt="schließen"/></button>
         </header>
 
         <section>
@@ -23,9 +23,9 @@ function getDialogHTML(i) {
         </section>
 
         <footer>
-            <button onclick="changeImage(${i - 1})"><img class="arrow-left" src="./assets/icons/back_button.svg" alt="back"/></button>
+            <button onclick="changeImage(${i - 1})"><img class="arrow-left" src="./assets/icons/back_button.svg" alt="zurück"/></button>
             <span class="imageCounter">${i + 1}/${myImgs.length}</span>
-            <button onclick="changeImage(${i + 1})"><img class="arrow-right" src="./assets/icons/back_button.svg" alt="continue"/></button>
+            <button onclick="changeImage(${i + 1})"><img class="arrow-right" src="./assets/icons/back_button.svg" alt="weiter"/></button>
         </footer>
     </div>
         `;

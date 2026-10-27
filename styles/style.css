@@ -94,8 +94,6 @@ button:focus-visible {
 }
 
 dialog.opened {
-    display: flex;
-
     /* Größe an den Bildschirm anpassen */
     width: 900px;
     max-width: 90vw;
